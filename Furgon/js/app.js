@@ -5,15 +5,21 @@ function email_test(input) {
 document.addEventListener('DOMContentLoaded', () => {
     const passwordInput = document.querySelector('input[name="password"]');
     const togglePass = document.querySelector('.form-registration__eye');
-    console.log(passwordInput.getAttribute('type'));
-    togglePass.addEventListener('click', () => {
-        if(passwordInput.getAttribute('type') === 'password'){
-            passwordInput.setAttribute('type', 'text');
-        }else{
-            passwordInput.setAttribute('type', 'password');
-        }
-        togglePass.classList.toggle('active');
-    });
+    if(passwordInput){
+        togglePass.addEventListener('click', () => {
+            if(passwordInput.getAttribute('type') === 'password'){
+                passwordInput.setAttribute('type', 'text');
+            }else{
+                passwordInput.setAttribute('type', 'password');
+            }
+            togglePass.classList.toggle('active');
+        });    
+    }
+    
+    const help = document.querySelector('.help');
+    setTimeout(() => {
+        help.classList.add('active');
+    }, 3000);
 
 }); // end
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
