@@ -1,0 +1,222 @@
+.header {
+    height: 60px;
+    @media (max-width: $md3+px){
+        height: auto;
+    }
+    &__content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @media (max-width: $md3+px){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__main {
+        display: flex;
+        align-items: center;
+        @media (max-width: $md3+px){
+            flex: 0 0 100%;
+            width: 100%;
+            height: 60px;
+            justify-content: flex-end;
+            position: relative;
+        }
+    }
+    &__info{
+    }
+    &__logo {
+        width: 98px;
+        height: 30px;
+        display: inline-block;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        @media (max-width: $md3+px){
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+    }
+
+    &__descr {
+        margin: 0px 0px 0px 10px;
+        padding: 0px 0px 0px 10px;
+        border-left: 1px solid #575757;
+        font-size: 12px;
+        line-height: 125%;
+        color: #575757;
+        max-width: 170px;
+        @media (max-width: $md2+px){
+            display: none;
+        }
+    }
+
+    &__menu {
+        margin: 0px 0px 0px 85px;
+        flex: 1 1 auto;
+        @media (max-width: $md1+px){
+            margin: 0px 0px 0px 40px;
+        }
+        @media (max-width: $md3+px){
+            margin: 0px 0px 0px 0px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        @media (max-width: $md3+px){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        li{
+            margin: 0px 20px 0px 0px;
+            @media (max-width: $md2+px){
+                margin: 0px 15px 0px 0px;
+            }
+            &:last-child{
+              margin: 0px 0px 0px 0px;
+            }
+            @media (max-width: $md3+px){
+                margin: 0px 7px 20px 7px;
+                &:last-child{
+                    margin: 0px 7px 20px 7px;
+                  }
+            }
+        }
+        
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        img{
+            width: 15px;
+            height: 15px;
+            object-fit: contain;
+        }
+        span{
+            margin: 0px 0px 0px 10px;
+            font-size: 16px;
+            color: #575757;
+            transition: all .3s ease-in-out;
+            
+            @media (max-width: $md1+px){
+                font-size: 15px;
+            }
+            @media (max-width: $md2+px){
+                font-size: 14px;
+                margin: 0px 0px 0px 5px;
+            }
+        }
+        @media (min-width: 992px){
+            &:hover{
+                span{
+                    color: #9B51E0;
+                }
+            }
+        }
+    }
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+    @media (max-width: $md3+px){
+       flex-direction: column;
+    }
+    &__btn{
+        position: relative;
+        border-radius: 5px;
+        font-size: 14px;
+        color: $white;
+        margin: 0px 20px 0px 0px;
+        @media (max-width: $md2+px){
+            margin: 0px 10px 0px 0px;
+            font-size: 12px;
+         }
+         @media (max-width: $md3+px){
+            margin: 0px 0px 10px 0px;
+         }
+        &:last-child{
+          margin: 0px 0px 0px 0px;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+    }
+    &__account {
+        padding: 10px 40px 10px 10px;
+        @media (max-width: $md2+px){
+            padding: 10px 35px 10px 10px;
+        }
+        background: #9B51E0;
+        @media (max-width: $md3+px){
+           margin: 0;
+           padding: 0;
+           background: transparent;
+           border-radius: 0;
+           width: 20px;
+           height: 20px;
+           font-size: 0;
+        }
+         &:before{
+            width: 20px;
+            height: 20px;
+            background: url('../img/icons/account.svg') 0 0 no-repeat;
+            background-size: contain !important;
+            @media (max-width: $md3+px){
+                background: url('../img/icons/accountMob.svg') 0 0 no-repeat;
+                z-index: 2;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
+    &__support {
+        padding: 10px 32px 10px 10px;
+        @media (max-width: $md2+px){
+            padding: 10px 28px 10px 10px;
+        }
+        background: #FFB800;
+        &:before{
+            width: 12px;
+            height: 19.25px;
+            background: url('../img/icons/support.svg') 0 0 no-repeat;
+            background-size: contain !important;
+        }
+    }
+
+    &__telegram {
+        padding: 10px 42px 10px 10px;
+        @media (max-width: $md2+px){
+            padding: 10px 38px 10px 10px;
+        }
+        background: #39A8DD;
+        &:before{
+            width: 22px;
+            height: 20px;
+            background: url('../img/icons/telegram.svg') 0 0 no-repeat;
+            background-size: contain !important;
+            @media (max-width: $md2+px){
+                width: 20px;
+                height: 18px;
+            }
+        }
+    }
+}

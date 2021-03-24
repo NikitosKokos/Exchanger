@@ -1,0 +1,587 @@
+.registration {
+    position: relative;
+    &__main {
+        flex: 0 0 55%;
+    }
+    &__content{
+        display: flex;
+        flex: 0 0 100%;
+        position: relative;
+        z-index: 3;
+        @media (max-width: $md3+px){
+           flex-direction: column;
+        }
+    }
+    &__buttons {
+        margin: 0px 0px 45px 0px;
+    }
+
+    &__steps {
+    }
+
+    &__form {
+    }
+
+    &__exchange {
+    }
+
+     &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 1180px;
+        background: url('../img/registration/mainBg.png') 0 0 no-repeat;
+        background-size: cover !important;
+        @media (max-width: $md3+px){
+            display: none;
+         }
+    }
+     &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(50vw - (0.6 - 0.5) * 1160px);
+        height: 100%;
+        background: linear-gradient(180deg, #9B51E0 18.06%, rgba(45, 156, 219, 0.3) 100%, rgba(45, 156, 219, 0.5) 100%);
+        z-index: 2;
+        @media (max-width: $md1+px){
+           width: 43%;
+        }
+        @media (max-width: $md3+px){
+            display: none;
+         }
+    }
+    &__bg{
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        height: 100%;
+        width: calc(50vw - (0.6 - 0.5) * 1160px);
+        position: absolute;
+        top: 0;
+        right: 0;
+        @media (max-width: $md1+px){
+           width: 43%;
+        }
+        @media (max-width: $md3+px){
+           display: none;
+        }
+    }
+
+}
+
+.steps-registration {
+    display: flex;
+    align-items: center;
+    margin: 0 -20px;
+    @media (max-width: $md1+px){
+        margin: 0 -10px;
+    }
+    @media (max-width: $md3+px){
+        margin: 0px;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 190px;
+    }
+    &__step {
+        flex: 0 0 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ABAAA6;
+        color: #575757;
+        font-size: 18px;
+        border-radius: 50%;
+        @media (max-width: $md1+px){
+            flex: 0 0 30px;
+            height: 30px;
+            font-size: 16px;
+        }
+        @media (max-width: $md2+px){
+            flex: 0 0 20px;
+            height: 20px;
+            font-size: 14px;
+        }
+        @media (max-width: $md3+px){
+            flex: 0 0 40px;
+            height: 40px;
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 143%;
+        color: #575757;
+        margin: 0px 0px 0px 10px;
+        @media (max-width: $md1+px){
+            font-size: 12px;
+        }
+        @media (max-width: $md2+px){
+            font-size: 10px;
+            margin: 0px 0px 0px 5px;
+        }
+        @media (max-width: $md3+px){
+            font-size: 14px;
+            margin: 0px 0px 0px 10px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid #575757;
+        flex: 0 0 33.333%;
+        padding: 0px 20px;
+        @media (max-width: $md1+px){
+            padding: 0 10px;
+        }
+        @media (max-width: $md3+px){
+            border-right: none;
+            padding: 0;
+            margin: 0px 0px 20px 0px;
+            width: 100%;
+            &:last-child{
+              margin: 0px 0px 0px 0px;
+            }
+        }
+        &:last-child{
+            border-right: none;
+        }
+        &.active {
+            .steps-registration__step{
+                background: #FFB800;
+                color: $white;
+            }
+            .steps-registration__text{
+                color: #FFB800;
+            }
+        }
+    }
+}
+
+.form-registration {
+    margin: 60px 0px 0px 0px;
+    @media (max-width: $md1+px){
+        margin: 40px 0px 0px 0px;
+    }
+    @media (min-width: $md2+px){
+        max-width: 360px;
+    }
+    @media (max-width: $md3+px){
+        margin: 70px 0px 0px 0px;
+    }
+    &__title {
+        font-size: 24px;
+        color: #555555;
+        margin: 0px 0px 30px 0px;
+        @media (max-width: $md2+px){
+           font-size: 22px;
+        }
+        @media (max-width: $md3+px){
+            font-size: 24px;
+        }
+    }
+
+    &__input {
+        background: $white;
+        box-shadow: -10px 10px 20px rgba(230, 230, 230, 0.2), 10px -10px 20px rgba(230, 230, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 25px rgba(230, 230, 230, 0.9);
+        border-radius: 5px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0px 0px 20px 0px;
+        input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #555;
+            &:placeholder{
+                font-size: 14px;
+                color: #555;
+            }
+        }
+        
+        &_password {
+            input{
+                padding: 15px 60px 15px 20px;
+            }
+        }
+    }
+    &__eye{
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 29px;
+        height: 20px;
+        z-index: 2;
+        cursor: pointer;
+        svg{
+            path{
+                transition: all .3s ease-in-out;
+            }
+        }
+        @media (min-width: 992px){
+           &:hover{
+            svg{
+                path{
+                    fill-opacity: .9;
+                }
+            }
+         }
+        }
+        &.active{
+            svg{
+                path{
+                    fill-opacity: .9;
+                }
+            }
+            @media (min-width: 992px){
+                &:hover{
+                 svg{
+                     path{
+                         fill-opacity: .5;
+                     }
+                 }
+              }
+             }
+        }
+    }
+    &__checkbox {
+        input{
+            display: none;
+        }
+        input:checked + label:before{
+            opacity: 1;
+        }
+    }
+    &__label{
+        font-size: 14px;
+        color: #555555;
+        position: relative;
+        padding: 0px 0px 0px 25px;
+        display: inline-block;
+        margin: 0px 0px 20px 0px;
+        a{
+            text-decoration: underline;
+            color: #555555;
+            @media (min-width: 992px){
+               &:hover{
+               text-decoration: none;
+             }
+            }
+        }
+         &:after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            border: 2px solid #FFB800;
+            border-radius: 2px;
+        }
+         &:before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 2.5px;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: #FFB800;
+            border-radius: 2px;
+            opacity: 0;
+            transition: all .3s ease-in-out;
+        }
+    }
+    &__google {
+        background: $white;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
+        border-radius: 10px;
+        width: 100%;
+        height: 54px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.54);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 40px 0px;
+        @media (max-width: $md3+px){
+            margin: 0px 0px 20px 0px;
+        }
+        @media (max-width: $md4+px){
+           font-size: 14px;
+        }
+        span{
+            position: relative;
+            &:before{
+                content: '';
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 50%;
+                left: -15px;
+                transform: translate(-100%,-50%);
+                background: url('../../img/registration/google.svg') 0 0 no-repeat;
+            }            
+        }
+    }
+
+    &__switch {
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.54);
+        margin: 0px 0px 80px 0px;
+        @media (max-width: 1280px){
+            margin: 0px 0px 40px 0px;
+        }
+        @media (max-width: $md2+px){
+           font-size: 16px;
+        }
+        a{
+            color: rgba(0, 0, 0, 0.54);
+            text-decoration: underline;
+            @media (min-width: 992px){
+               &:hover{
+               text-decoration: none;
+             }
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        align-items: center;
+        margin: 0px 0px 95px 0px;
+        @media (max-width: 1280px){
+            margin: 0px 0px 60px 0px;
+        }
+        @media (max-width: $md1+px){
+            margin: 0px 0px 40px 0px;
+        }
+        @media (max-width: $md3+px){
+           justify-content: space-between;
+           align-items: flex-end;
+        }
+    }
+
+    &__btn {
+        font-weight: 700;
+        font-size: 18px;
+        color: #FFFFFF;
+        padding: 0 30px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FFB800;
+        border-radius: 5px;
+        @media (max-width: $md4+px){
+           height: 40px;
+           padding: 0 15px;
+        }
+    }
+
+    &__step {
+        margin: 0px 0px 0px 35px;
+        font-size: 14px;
+        color: #575757;
+        @media (max-width: $md2+px){
+            margin: 0px 0px 0px 20px;
+        }
+    }
+}
+
+
+
+.exchange-registration {
+    padding: 0px 0px 0px 132px;
+    flex: 1 1 auto;
+    position: relative;
+    
+    &__wrapper{
+        position: relative;
+        z-index: 3;
+    }
+    @media (max-width: 1280px){
+        padding: 0px 0px 0px 100px;
+    }
+    @media (max-width: $md1+px){
+        padding: 0px 0px 0px 60px;
+    }
+    @media (max-width: $md3+px){
+        padding: 0px 30px 30px 30px;
+        margin: 0 -30px;
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #9B51E0 18.06%, rgba(45, 156, 219, 0.3) 100%, rgba(45, 156, 219, 0.5) 100%);
+            z-index: 2;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../img/registration/bg.png') 0 0 no-repeat;
+        }
+    }
+    &__title {
+        font-size: 38px;
+        line-height: 132%;
+        color: $white;
+        margin: 50px 0px 40px 0px;
+        @media (max-width: 1280px){
+            line-height: 120%;
+        }
+        @media (max-width: $md1+px){
+            font-size: 30px;
+        }
+        @media (max-width: $md2+px){
+            font-size: 26px;
+        }
+        @media (max-width: $md3+px){
+            font-size: 24px;
+            margin: 50px 0px 30px 0px;
+        }
+    }
+
+    &__label {
+        font-size: 20px;
+        line-height: 125%;
+        color: $white;
+        margin: 0px 0px 15px 0px;
+        @media (max-width: $md3+px){
+            font-size: 18px;
+            margin: 0px 0px 20px 0px;
+        }
+    }
+
+    &__body {
+    }
+
+    &__item {
+        width: 100%;
+        height: 35px;
+        background: $white;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        margin: 0px 0px 10px 0px;
+        @media (max-width: $md4+px){
+            padding: 0 5px;
+        }
+        &:last-child{
+          margin: 0px 0px 0px 0px;
+        }
+    }
+
+    &__time {
+        font-size: 14px;
+        color: #555555;
+        position: relative;
+        padding: 0px 0px 0px 25px;
+        flex: 1 1 auto;
+        @media (min-width: $md3+px){
+           @media (max-width: $md2+px){
+                font-size: 10px;
+                padding: 0px 0px 0px 0px;
+            }
+        }
+        @media (max-width: $md4+px){
+            font-size: 12px;
+            padding: 0px 0px 0px 20px;
+        }
+        @media (max-width: 359px){
+            font-size: 10px;
+        }
+         &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background: url('../img/icons/calendar.svg') 0 0 no-repeat;
+            @media (min-width: $md3+px){
+                @media (max-width: $md2+px){
+                    display: none;
+                }
+             }
+        }
+    }
+
+    &__exchange {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+    }
+
+    &__currency {
+        width: 15px;
+        height: 15px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__conversion {
+        margin: 0 5px;
+        img{
+            vertical-align: middle;
+        }
+    }
+
+    &__sum {
+        font-size: 14px;
+        color: #555555;
+        margin: 0px 0px 0px 5px;
+        @media (min-width: $md3+px){
+            @media (max-width: $md2+px){
+                 font-size: 10px;
+             }
+         }
+         @media (max-width: $md4+px){
+            font-size: 12px;
+        }
+        @media (max-width: 359px){
+            font-size: 10px;
+        }
+    }
+
+    &__copy {
+        height: 15px;
+        flex: 0 0 12px;
+        cursor: pointer;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
