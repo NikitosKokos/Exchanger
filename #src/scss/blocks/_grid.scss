@@ -135,7 +135,8 @@
     &__title{
         font-size: 26px;
         line-height: 135%;
-        color: #9B51E0;
+        color: #333;
+        font-weight: 700;
         padding: 0px 0px 10px 0px;
         @media (max-width: $md1+px){
             font-size: 22px;
