@@ -12,6 +12,8 @@
            flex-direction: column;
         }
     }
+    &__info {
+    }
     &__buttons {
         margin: 0px 0px 45px 0px;
     }
@@ -25,19 +27,7 @@
     &__exchange {
     }
 
-     &:before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 1180px;
-        background: url('../img/registration/mainBg.png') 0 0 no-repeat;
-        background-size: cover !important;
-        @media (max-width: $md3+px){
-            display: none;
-         }
-    }
+     
      &:after{
         content: '';
         position: absolute;
@@ -165,7 +155,19 @@
         }
     }
 }
-
+.title{
+    font-size: 24px;
+    color: #555555;
+    @media (max-width: $md2+px){
+       font-size: 22px;
+    }
+    @media (max-width: $md3+px){
+        font-size: 24px;
+    }   
+    &_p{
+        color: #9B51E0;
+    } 
+}
 .form-registration {
     margin: 60px 0px 0px 0px;
     @media (max-width: $md1+px){
@@ -178,15 +180,7 @@
         margin: 70px 0px 0px 0px;
     }
     &__title {
-        font-size: 24px;
-        color: #555555;
         margin: 0px 0px 30px 0px;
-        @media (max-width: $md2+px){
-           font-size: 22px;
-        }
-        @media (max-width: $md3+px){
-            font-size: 24px;
-        }
     }
 
     &__input {
@@ -200,6 +194,7 @@
         align-items: center;
         position: relative;
         margin: 0px 0px 20px 0px;
+        overflow: hidden;
         input{
             position: absolute;
             top: 0;
@@ -219,6 +214,27 @@
             input{
                 padding: 15px 60px 15px 20px;
             }
+        }
+    }
+    &__textarea{
+        height: 100px;
+        textarea{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #555;
+            resize: none;
+            &:placeholder{
+                font-size: 14px;
+                color: #555;
+            }
+        }
+        @media (max-width: $md4+px){
+           height: 90px;
         }
     }
     &__eye{
@@ -404,10 +420,21 @@
         align-items: center;
         background: #FFB800;
         border-radius: 5px;
+        transition: all .3s ease-in-out;
         @media (max-width: $md4+px){
            height: 40px;
            padding: 0 15px;
         }
+        &_s{
+            padding: 0 15px;
+            height: 40px;
+        }
+        @media (min-width: 992px){
+            &:hover{
+             color: $white;
+             background: #9B51E0;
+          }
+         }
     }
 
     &__step {
@@ -598,3 +625,43 @@
         }
     }
 }
+
+
+
+.info-registration {
+
+    &__title {
+        margin: 0px 0px 10px 0px;
+        @media (max-width: $md4+px){
+            font-size: 22px;
+         }
+    }
+
+    &__logo {
+        margin: 0px 0px 40px 0px;
+        width: 98px;
+        height: 30px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__descr {
+        margin: 0px 0px 65px 0px;
+        font-size: 18px;
+        line-height: 139%;
+        color: #555555;
+        p{
+            margin: 0px 0px 10px 0px;
+            &:last-child{
+              margin: 0px 0px 0px 0px;
+            }
+        }
+        span{
+            font-weight: 700;
+        }
+    }
+}
+

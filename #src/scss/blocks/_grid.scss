@@ -1,0 +1,195 @@
+.grid {
+    &__content {
+    }
+
+    &__main {
+    }
+
+    &__buttons {
+        margin: 0px 0px 45px 0px;
+        @media (max-width: $md3+px){
+           margin: 0px 0px 40px 0px;
+        }
+    }
+
+    &__wrapper {
+
+    }
+
+    &__title {
+        margin: 0px 0px 40px 0px;
+        @media (max-width: $md3+px){
+            margin: 0px 0px 20px 0px;
+        }
+    }
+    &__review{
+        @media (max-width: $md3+px){
+           margin: 0px 0px 40px 0px;
+           position: relative;
+           height: 45px;
+        }
+    }
+    &__body {        
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 40px;
+        margin: 0px 0px 80px 0px;
+        @media (max-width: $md1+px){
+            gap: 30px;
+            margin: 0px 0px 60px 0px;
+        }
+        @media (max-width: $md2+px){
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+        }
+        @media (max-width: $md3+px){
+            grid-template-columns: 1fr;
+            margin: 0px 0px 40px 0px;
+        }
+        @media (max-width: $md4+px){
+            margin: 0px -10px 40px -10px;
+        }
+    }
+
+    &__item {
+    }
+
+    &__footer {
+        margin: 0px 0px 70px 0px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        @media (max-width: $md3+px){
+            margin: 0px 0px 40px 0px;
+         }
+    }
+
+    &__btn {
+        border-radius: 5px;
+        height: 40px;
+        padding: 0 15px;
+        color: $white;
+        box-shadow: none;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease-in-out;
+        &_prev {
+            background: #FFB800;
+            @media (min-width: 992px){
+               &:hover{
+                background: #9B51E0;
+             }
+            }
+        }
+
+        &_review {
+            height: 45px;
+            font-size: 20px;
+            color: #9B51E0;
+            background: $white;
+            border: 1px solid;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            @media (min-width: 992px){
+               &:hover{
+                color: $white;
+                background: #9B51E0;
+             }
+            }
+        }
+
+        &_next {
+            background: #9B51E0;
+            @media (min-width: 992px){
+                &:hover{
+                 background: #FFB800;
+              }
+             }
+        }
+    }
+}
+
+.item-grid {
+    padding: 20px;
+    border: 1px solid #9B51E0;
+    border-radius: 10px;
+    background: $white;
+    box-shadow: -10px 10px 20px rgba(230, 230, 230, 0.2), 10px -10px 20px rgba(230, 230, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 25px rgba(230, 230, 230, 0.9);
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $md4+px){
+        padding: 20px 10px 30px 10px;
+    }
+    &_n{
+        transition: all .3s ease-in-out;
+        @media (min-width: 992px){
+            &:hover{
+             box-shadow: -10px 10px 20px rgba(230, 230, 230, 0.8), 10px -10px 20px rgba(230, 230, 230, 0.8), -10px -10px 20px rgba(255, 255, 255, 0.8), 10px 10px 25px rgba(230, 230, 230, 0.8);
+          }
+         }
+    }
+    &__title{
+        font-size: 26px;
+        line-height: 135%;
+        color: #9B51E0;
+        padding: 0px 0px 10px 0px;
+        @media (max-width: $md1+px){
+            font-size: 22px;
+        }
+        @media (max-width: $md4+px){
+            padding: 0px 0px 20px 0px;
+        }
+    }
+    &__descr{
+        font-size: 18px;
+        line-height: 139%;
+        color: #555555;
+        padding: 0px 0px 10px 0px;
+        flex: 1 1 auto;
+        @media (max-width: $md1+px){
+            font-size: 16px;
+        }
+        @media (max-width: $md4+px){
+            padding: 0px 0px 35px 0px;
+        }
+    }
+    &__name {
+        font-size: 22px;
+        line-height: 136%;
+        color: #555;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__message {
+        color: #757575;
+        font-size: 16px;
+        line-height: 125%;
+        flex: 1 1 auto;
+        padding: 0px 0px 20px 0px;
+        @media (max-width: $md4+px){
+            padding: 0px 0px 120px 0px;
+        }
+    }
+
+    &__data {
+        font-size: 14px;
+        color: #555555;
+        position: relative;
+        padding: 0px 0px 0px 25px;
+         &:before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 15px;
+            background: url('../img/icons/calendar.svg') 0 0 no-repeat;
+            background-size: contain !important;
+        }
+    }
+}

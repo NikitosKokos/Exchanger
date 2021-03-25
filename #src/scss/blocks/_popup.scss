@@ -1,0 +1,202 @@
+.help {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    right: 30px;
+    bottom: 30px;
+    background: #FFB800;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+    @media (min-width: 992px){
+       &:hover{
+       background: #9B51E0;
+     }
+    }
+    img{
+        width: 40px;
+        height: 40px;
+    }
+    @media (max-width: $md3+px){
+       width: 60px;
+       height: 60px;
+       right: 15px;
+       bottom: 15px;
+       img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 10;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    overflow: auto;
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        padding: 20px;
+        @media (max-width: $md3+px){
+           padding: 0;
+        }
+    }
+
+    &__body {
+        width: 960px;
+        padding: 85px 100px 150px 100px;
+        background: $white;
+        border: 1px solid #9B51E0;
+        border-radius: 10px;
+        position: relative;
+        @media (max-width: $md1+px){
+            padding: 70px 100px 120px 100px;
+        }
+        @media (max-width: $md2+px){
+            padding: 70px 80px 100px 80px;
+        }
+        @media (max-width: $md3+px){
+            min-height: 100vh;
+            padding: 85px 40px 60px 40px;
+        }
+        @media (max-width: $md3+px){
+            padding: 85px 20px 60px 20px;
+        }
+    }
+
+    &__form {
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        svg{
+            path{
+                transition: all .3s ease-in-out;
+            }
+        }
+        @media (min-width: 992px){
+           &:hover{
+           svg{
+               path{
+                fill: #9B51E0;
+               }
+           }
+         }
+        }
+        @media (max-width: $md3+px){
+            right: 35px;
+         }
+    }
+}
+.form-popup {
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 40px 0px;
+    }
+
+    &__input {
+        background: $white;
+        box-shadow: -10px 10px 20px rgba(230, 230, 230, 0.2), 10px -10px 20px rgba(230, 230, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 25px rgba(230, 230, 230, 0.9);
+        border-radius: 5px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0px 0px 20px 0px;
+        overflow: hidden;
+        input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #555;
+            &:placeholder{
+                font-size: 14px;
+                color: #555;
+            }
+        }
+    }
+    &__textarea{
+        height: 100px;
+        textarea{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #555;
+            resize: none;
+            &:placeholder{
+                font-size: 14px;
+                color: #555;
+            }
+        }
+        @media (max-width: $md4+px){
+           height: 90px;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn {
+        font-weight: 700;
+        font-size: 18px;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FFB800;
+        border-radius: 5px;
+        padding: 0 15px;
+        height: 40px;
+        transition: all .3s ease-in-out;
+        @media (min-width: 992px){
+            &:hover{
+                background: #9B51E0;
+            }
+        }
+    }
+}
+

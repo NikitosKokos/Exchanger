@@ -9,6 +9,9 @@
 @import "./blocks/header";
 @import "./blocks/footer";
 @import "./blocks/registration";
+@import "./blocks/agreement";
+@import "./blocks/grid";
+@import "./blocks/popup";
 
 // global styles
 ._container {
@@ -32,6 +35,21 @@
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	&:before{
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 0;
+        height: 100%;
+        width: 1180px;
+        background: url('../img/bg.png') 0 0 repeat;
+        background-size: cover !important;
+		z-index: -1;
+        @media (max-width: $md3+px){
+            display: none;
+         }
+    }
 	&._loaded {
 	}
 }

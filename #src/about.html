@@ -15,38 +15,25 @@
 							<a href="#" class="buttons__btn buttons__support"><span>Служба поддержки</span></a>
 							<a href="#" class="buttons__btn buttons__telegram"><span>Наш телеграм-бот</span></a>
 						</div>
-						<div class="registration__steps steps-registration">
-							<div class="steps-registration__item active">
-								<div class="steps-registration__step">1</div>
-								<div class="steps-registration__text">Вход / Регистрация</div>
-							</div>
-							<div class="steps-registration__item">
-								<div class="steps-registration__step">2</div>
-								<div class="steps-registration__text">Выбор направления
-									Ввод реквизитов</div>
-							</div>
-							<div class="steps-registration__item">
-								<div class="steps-registration__step">3</div>
-								<div class="steps-registration__text">Завершение обмена</div>
-							</div>
-						</div>
+						<div class="registration__info info-registration">
+                            <h1 class="info-registration__title title">Информация о компании</h1>
+                            <div class="info-registration__logo"><img src="./img/logo/logo.svg" alt="logo"></div>
+                            <div class="info-registration__descr">
+                                <p><span>ИП</span> Акакиев Иван Сергеевич</p>
+                                <p><span>УНП</span> 12345678</p>
+                                <p>+00000000000</p>
+                                <p><span>Юр. адрес:</span> г. Минск, улица Пушкина, д.34</p>
+                            </div>
+                        </div>
 						<form action="#" class="registration__form form-registration">
-							<h1 class="form-registration__title title">Регистрация</h1>
+							<h2 class="form-registration__title title title_p">Оставьте заявку</h2>
+                            <div class="form-registration__input"><input type="text" name="userName" placeholder="Имя"></div>
 							<div class="form-registration__input"><input type="email" name="email" placeholder="Email"></div>
-							<div class="form-registration__input"><input type="text" name="userName" placeholder="ФИО или название компании"></div>
-							<div class="form-registration__input form-registration__input_password">
-								<input type="password" name="password" placeholder="Пароль">
-								<div class="form-registration__eye"><svg width="29" height="20" viewBox="0 0 29 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 0C7.90909 0 2.28045 4.14667 0 10C2.28045 15.8533 7.90909 20 14.5 20C21.0909 20 26.7195 15.8533 29 10C26.7195 4.14667 21.0909 0 14.5 0ZM14.5 16.6667C10.8618 16.6667 7.90909 13.68 7.90909 10C7.90909 6.32004 10.8618 3.33337 14.5 3.33337C18.1382 3.33337 21.0909 6.32004 21.0909 10C21.0909 13.68 18.1382 16.6667 14.5 16.6667ZM14.5 6C12.3118 6 10.5455 7.78667 10.5455 10C10.5455 12.2133 12.3118 14 14.5 14C16.6882 14 18.4545 12.2133 18.4545 10C18.4545 7.78667 16.6882 6 14.5 6Z" fill="#575757" fill-opacity="0.5"/>
-									</svg>
-									</div>
-							</div>
-							<div class="form-registration__checkbox"><input id="agreement" type="checkbox"><label for="agreement" class="form-registration__label">Я принимаю условия <a href="#">соглашения</a></label></div>
-							<a href="#" class="form-registration__google"><span>Продолжить через Google</span></a>
-							<div class="form-registration__switch">Уже есть аккаунт? <a href="/login.html">Войти</a></div>
+							<div class="form-registration__input form-registration__textarea">
+                                <textarea name="message" placeholder="Ваше сообщение"></textarea>
+                            </div>
 							<div class="form-registration__footer">
-								<button class="form-registration__btn">Продолжить</button>
-								<div class="form-registration__step">Шаг: 1 из 3</div>
+								<button class="form-registration__btn form-registration__btn_s">Продолжить</button>
 							</div>
 						</form>
 					</div>

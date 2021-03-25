@@ -1,0 +1,57 @@
+.agreement {
+
+    &__content {
+    }
+
+    &__main {
+    }
+
+    &__buttons {
+        margin: 0px 0px 25px 0px;
+    }
+
+    &__title {
+        margin: 0px 0px 40px 0px;
+        @media (max-width: $md3+px){
+            margin: 0px 0px 25px 0px;
+        }
+        @media (max-width: $md4+px){
+           font-size: 22px;
+        }
+    }
+    &__wrapper{
+        padding: 20px;
+        background: $white;
+        box-shadow: -10px 10px 20px rgba(230, 230, 230, 0.2), 10px -10px 20px rgba(230, 230, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 25px rgba(230, 230, 230, 0.9);
+        border-radius: 10px;
+        margin: 0px 0px 50px 0px;
+        @media (max-width: $md3+px){
+           box-shadow: none;
+           padding: 0;
+        }
+    }
+    &__body {
+        font-size: 18px;
+        line-height: 139%;
+        color: #555555;
+        @media (max-width: $md3+px){
+           font-size: 16px;
+        }
+        p{
+            margin: 0px 0px 20px 0px;
+            &:last-child{
+              margin: 0px 0px 0px 0px;
+            }
+        }
+        a{
+            text-decoration: underline;
+            color: #555555;
+            @media (min-width: 992px){
+               &:hover{
+               text-decoration: none;
+             }
+            }
+        }
+    }
+}
+
