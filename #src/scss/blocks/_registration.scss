@@ -195,6 +195,8 @@
         position: relative;
         margin: 0px 0px 20px 0px;
         overflow: hidden;
+        transition: all .3s ease-in-out;
+        
         input{
             position: absolute;
             top: 0;
@@ -204,12 +206,21 @@
             padding: 15px 20px;
             font-size: 14px;
             color: #555;
-            &:placeholder{
+            &::placeholder{
                 font-size: 14px;
                 color: #555;
             }
         }
-        
+        &.error{
+            border: 1px solid #FF0000;
+            input, textarea{
+                color: #FF0000;
+                &::placeholder{
+                    color: #FF0000;
+                }
+            }
+            
+        }
         &_password {
             input{
                 padding: 15px 60px 15px 20px;
@@ -293,13 +304,27 @@
         display: inline-block;
         margin: 0px 0px 20px 0px;
         a{
-            text-decoration: underline;
             color: #555555;
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: #555555;
+                transition: all .3s ease-in-out;
+                opacity: 1;
+            }  
             @media (min-width: 992px){
-               &:hover{
-               text-decoration: none;
+                &:hover{
+                    &:after{
+                        width: 0%;
+                        opacity: 0;
+                    } 
+              }
              }
-            }
         }
          &:after{
             content: '';
@@ -371,12 +396,26 @@
         }
         a{
             color: rgba(0, 0, 0, 0.54);
-            text-decoration: underline;
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background: rgba(0, 0, 0, 0.54);
+                transition: all .3s ease-in-out;
+                opacity: 1;
+            }  
             @media (min-width: 992px){
-               &:hover{
-               text-decoration: none;
+                &:hover{
+                    &:after{
+                        width: 0%;
+                        opacity: 0;
+                    } 
+              }
              }
-            }
         }
     }
 

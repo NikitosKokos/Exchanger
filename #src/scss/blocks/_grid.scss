@@ -28,6 +28,9 @@
            position: relative;
            height: 45px;
         }
+        @media (max-width: 359px){
+           white-space: nowrap;
+        }
     }
     &__body {        
         display: grid;
