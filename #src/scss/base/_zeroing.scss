@@ -95,5 +95,11 @@ h6 {
 	font-weight: inherit;
 	font-size: inherit;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+    margin: 0; 
+}
 //-webkit-overflow-scrolling: touch;
 //animation-play-state: paused !important;

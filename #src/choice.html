@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('_head.html',{
+	"title":"Furgon"
+	})
+	<body>
+		<div class="wrapper">
+			@@include('_header.html',{})
+			<main class="page">
+				<section class="registration">
+					<div class='registration__content _container'>
+					<div class="registration__main">
+						<div class="registration__buttons buttons">
+							<a href="#" class="buttons__btn buttons__account" data-da='header__main,1,767' ><span>Аккаунт</span></a>
+							<a href="#" class="buttons__btn buttons__support"><span>Служба поддержки</span></a>
+							<a href="#" class="buttons__btn buttons__telegram"><span>Наш телеграм-бот</span></a>
+						</div>
+						<div class="registration__steps steps-registration">
+							<div class="steps-registration__item">
+								<div class="steps-registration__step">1</div>
+								<div class="steps-registration__text">Вход / Регистрация</div>
+							</div>
+							<div class="steps-registration__item active">
+								<div class="steps-registration__step">2</div>
+								<div class="steps-registration__text">Выбор направления
+									Ввод реквизитов</div>
+							</div>
+							<div class="steps-registration__item">
+								<div class="steps-registration__step">3</div>
+								<div class="steps-registration__text">Завершение обмена</div>
+							</div>
+						</div>
+						<form action="#" class="registration__form form-choice">
+							<div class="form-choice__title">Отдаёте:</div>
+                            <div class="form-choice__from">
+                                <div class="form-choice__select">
+                                    <div class="__select" data-state="">
+                                        <div class="__select__title" data-default="Alfabank RUB"><img src="./img/currencies/03.png" alt=""> Alfabank RUB</div>
+                                        <div class="__select__content">
+                                          <input id="selectfrom01" class="__select__input" type="radio" name="selectFrom" />
+                                          <label for="selectfrom01" class="__select__label"><img src="./img/currencies/01.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectfrom02" class="__select__input" type="radio" name="selectFrom" />
+                                          <label for="selectfrom02" class="__select__label"><img src="./img/currencies/02.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectfrom03" class="__select__input" type="radio" name="selectFrom" checked/>
+                                          <label for="selectfrom03" class="__select__label"><img src="./img/currencies/03.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectfrom04" class="__select__input" type="radio" name="selectFrom" />
+                                          <label for="selectfrom04" class="__select__label"><img src="./img/currencies/01.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectfrom05" class="__select__input" type="radio" name="selectFrom"/>
+                                          <label for="selectfrom05" class="__select__label"><img src="./img/currencies/05.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectfrom06" class="__select__input" type="radio" name="selectFrom" />
+                                          <label for="selectfrom06" class="__select__label"><img src="./img/currencies/02.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectfrom07" class="__select__input" type="radio" name="selectFrom" />
+                                          <label for="selectfrom07" class="__select__label"><img src="./img/currencies/03.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectfrom08" class="__select__input" type="radio" name="selectFrom" />
+                                          <label for="selectfrom08" class="__select__label"><img src="./img/currencies/05.png" alt="currency"> Alfabank RUB</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-choice__input"><input type="number" name="fromCount" placeholder="Мин. 1000"><span>RUB</span></div>
+                            </div>
+                            <div class="form-choice__title">Получаете:</div>
+                            <div class="form-choice__to">
+                                <div class="form-choice__select">
+                                    <div class="__select" data-state="">
+                                        <div class="__select__title" data-default="Alfabank RUB"><img src="./img/currencies/05.png" alt=""> Alfabank RUB</div>
+                                        <div class="__select__content">
+                                          <input id="selectto01" class="__select__input" type="radio" name="selectTo" />
+                                          <label for="selectto01" class="__select__label"><img src="./img/currencies/01.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectto02" class="__select__input" type="radio" name="selectTo" />
+                                          <label for="selectto02" class="__select__label"><img src="./img/currencies/02.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectto03" class="__select__input" type="radio" name="selectTo" />
+                                          <label for="selectto03" class="__select__label"><img src="./img/currencies/03.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectto04" class="__select__input" type="radio" name="selectTo" />
+                                          <label for="selectto04" class="__select__label"><img src="./img/currencies/01.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectto05" class="__select__input" type="radio" name="selectTo" checked/>
+                                          <label for="selectto05" class="__select__label"><img src="./img/currencies/05.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectto06" class="__select__input" type="radio" name="selectTo" />
+                                          <label for="selectto06" class="__select__label"><img src="./img/currencies/02.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectto07" class="__select__input" type="radio" name="selectTo" />
+                                          <label for="selectto07" class="__select__label"><img src="./img/currencies/03.png" alt="currency"> Alfabank RUB</label>
+                                          <input id="selectto08" class="__select__input" type="radio" name="selectTo" />
+                                          <label for="selectto08" class="__select__label"><img src="./img/currencies/05.png" alt="currency"> Alfabank RUB</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-choice__input"><input type="number" name="toCount"><span>BTC</span></div>
+                            </div>
+                            <div class="form-choice__descr">
+                                <div class="form-choice__label" data-da="form-choice__from,2,992">Минимальная сумма обмена:  1000.00 RUB</div>
+                                <div class="form-choice__label">Курс обмена: 4057354.767 RUB = 1 BTC</div>
+                            </div>
+                            <div class="form-choice__title">Резерв:</div>
+                            <div class="form-choice__reserve">
+                                <img src="./img/currencies/05.png" alt="currency">
+                                Bitcoin <span>(0.07000000 BTC)</span>
+                            </div>
+							<div class="form-registration__footer">
+								<button class="form-registration__btn">Продолжить</button>
+								<div class="form-registration__step">Шаг: 2 из 3</div>
+							</div>
+						</form>
+					</div>
+					<div class="registration__exchange exchange-registration">
+						<div class="exchange-registration__wrapper">
+							<div class="exchange-registration__title">Самый надежный<br>
+								и быстрый обменник</div>
+							<div class="exchange-registration__label">Последние обмены:</div>
+							<div class="exchange-registration__body">
+								<div class="exchange-registration__item">
+									<div class="exchange-registration__time">04.03.2021, 19:42</div>
+									<div class="exchange-registration__exchange">
+										<div class="exchange-registration__currency"><img src="./img/currencies/01.png" alt="currency"></div>
+										<div class="exchange-registration__conversion"><img src="./img/registration/arrow.svg" alt="arrow"></div>
+										<div class="exchange-registration__currency"><img src="./img/currencies/02.png" alt="currency"></div>
+										<div class="exchange-registration__sum">58699.67 RUB</div>
+									</div>
+									<div class="exchange-registration__copy"><img src="./img/icons/copy.svg" alt="copy"></div>
+								</div>
+								<div class="exchange-registration__item">
+									<div class="exchange-registration__time">04.03.2021, 19:42</div>
+									<div class="exchange-registration__exchange">
+										<div class="exchange-registration__currency"><img src="./img/currencies/01.png" alt="currency"></div>
+										<div class="exchange-registration__conversion"><img src="./img/registration/arrow.svg" alt="arrow"></div>
+										<div class="exchange-registration__currency"><img src="./img/currencies/02.png" alt="currency"></div>
+										<div class="exchange-registration__sum">58699.67 RUB</div>
+									</div>
+									<div class="exchange-registration__copy"><img src="./img/icons/copy.svg" alt="copy"></div>
+								</div>
+								<div class="exchange-registration__item">
+									<div class="exchange-registration__time">04.03.2021, 19:42</div>
+									<div class="exchange-registration__exchange">
+										<div class="exchange-registration__currency"><img src="./img/currencies/01.png" alt="currency"></div>
+										<div class="exchange-registration__conversion"><img src="./img/registration/arrow.svg" alt="arrow"></div>
+										<div class="exchange-registration__currency"><img src="./img/currencies/02.png" alt="currency"></div>
+										<div class="exchange-registration__sum">58699.67 RUB</div>
+									</div>
+									<div class="exchange-registration__copy"><img src="./img/icons/copy.svg" alt="copy"></div>
+								</div>
+								<div class="exchange-registration__item">
+									<div class="exchange-registration__time">04.03.2021, 19:42</div>
+									<div class="exchange-registration__exchange">
+										<div class="exchange-registration__currency"><img src="./img/currencies/01.png" alt="currency"></div>
+										<div class="exchange-registration__conversion"><img src="./img/registration/arrow.svg" alt="arrow"></div>
+										<div class="exchange-registration__currency"><img src="./img/currencies/02.png" alt="currency"></div>
+										<div class="exchange-registration__sum">58699.67 RUB</div>
+									</div>
+									<div class="exchange-registration__copy"><img src="./img/icons/copy.svg" alt="copy"></div>
+								</div>
+								<div class="exchange-registration__item">
+									<div class="exchange-registration__time">04.03.2021, 19:42</div>
+									<div class="exchange-registration__exchange">
+										<div class="exchange-registration__currency"><img src="./img/currencies/01.png" alt="currency"></div>
+										<div class="exchange-registration__conversion"><img src="./img/registration/arrow.svg" alt="arrow"></div>
+										<div class="exchange-registration__currency"><img src="./img/currencies/02.png" alt="currency"></div>
+										<div class="exchange-registration__sum">58699.67 RUB</div>
+									</div>
+									<div class="exchange-registration__copy"><img src="./img/icons/copy.svg" alt="copy"></div>
+								</div>
+								<div class="exchange-registration__item">
+									<div class="exchange-registration__time">04.03.2021, 19:42</div>
+									<div class="exchange-registration__exchange">
+										<div class="exchange-registration__currency"><img src="./img/currencies/01.png" alt="currency"></div>
+										<div class="exchange-registration__conversion"><img src="./img/registration/arrow.svg" alt="arrow"></div>
+										<div class="exchange-registration__currency"><img src="./img/currencies/02.png" alt="currency"></div>
+										<div class="exchange-registration__sum">58699.67 RUB</div>
+									</div>
+									<div class="exchange-registration__copy"><img src="./img/icons/copy.svg" alt="copy"></div>
+								</div>
+								<div class="exchange-registration__item">
+									<div class="exchange-registration__time">04.03.2021, 19:42</div>
+									<div class="exchange-registration__exchange">
+										<div class="exchange-registration__currency"><img src="./img/currencies/01.png" alt="currency"></div>
+										<div class="exchange-registration__conversion"><img src="./img/registration/arrow.svg" alt="arrow"></div>
+										<div class="exchange-registration__currency"><img src="./img/currencies/02.png" alt="currency"></div>
+										<div class="exchange-registration__sum">58699.67 RUB</div>
+									</div>
+									<div class="exchange-registration__copy"><img src="./img/icons/copy.svg" alt="copy"></div>
+								</div>
+								<div class="exchange-registration__item">
+									<div class="exchange-registration__time">04.03.2021, 19:42</div>
+									<div class="exchange-registration__exchange">
+										<div class="exchange-registration__currency"><img src="./img/currencies/01.png" alt="currency"></div>
+										<div class="exchange-registration__conversion"><img src="./img/registration/arrow.svg" alt="arrow"></div>
+										<div class="exchange-registration__currency"><img src="./img/currencies/02.png" alt="currency"></div>
+										<div class="exchange-registration__sum">58699.67 RUB</div>
+									</div>
+									<div class="exchange-registration__copy"><img src="./img/icons/copy.svg" alt="copy"></div>
+								</div>
+								<div class="exchange-registration__item">
+									<div class="exchange-registration__time">04.03.2021, 19:42</div>
+									<div class="exchange-registration__exchange">
+										<div class="exchange-registration__currency"><img src="./img/currencies/01.png" alt="currency"></div>
+										<div class="exchange-registration__conversion"><img src="./img/registration/arrow.svg" alt="arrow"></div>
+										<div class="exchange-registration__currency"><img src="./img/currencies/02.png" alt="currency"></div>
+										<div class="exchange-registration__sum">58699.67 RUB</div>
+									</div>
+									<div class="exchange-registration__copy"><img src="./img/icons/copy.svg" alt="copy"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="registration__bg"><img src="./img/registration/bg.png" alt="bg"></div>
+				</section>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		@@include('_popup.html',{})
+		@@include('_js.html',{})
+	</body>
+</html>

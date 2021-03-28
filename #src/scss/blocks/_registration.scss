@@ -2,6 +2,12 @@
     position: relative;
     &__main {
         flex: 0 0 55%;
+        &_c{
+            max-width: 55%;
+            @media (max-width: $md3+px){
+               max-width: none;
+            }
+        }
     }
     &__content{
         display: flex;
@@ -27,6 +33,8 @@
     &__exchange {
     }
 
+    &__form {
+    }
      
      &:after{
         content: '';
@@ -704,3 +712,352 @@
     }
 }
 
+
+.form-choice {
+    margin: 100px 0px 0px 0px;
+    width: 100%;
+    @media (max-width: $md2+px){
+       margin: 70px 0px 0px 0px;
+    }
+    &__title {
+        font-size: 24px;
+        color: #555555;
+        margin: 0px 0px 20px 0px;
+        @media (max-width: $md3+px){
+            margin: 0px 0px 15px 0px;
+        }
+        @media (max-width: 359px){
+            font-size: 22px;
+         }
+    }
+
+    &__from {
+        margin: 0px 0px 40px 0px;
+        display: grid;
+        grid-template-columns: 11fr 9fr;
+        gap: 40px;
+        @media (max-width: $md1+px){
+           gap: 20px;
+        }
+        @media (max-width: $md2+px){
+            grid-template-columns: 1fr;
+            gap: 0px;
+        }
+    }
+
+    &__select {
+        margin: 0px 0px 20px 0px;
+    }
+    &__input{
+        background: $white;
+        box-shadow: -10px 10px 20px rgba(230, 230, 230, 0.2), 10px -10px 20px rgba(230, 230, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 25px rgba(230, 230, 230, 0.9);
+        border-radius: 5px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0px 0px 20px 0px;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+        span{
+            font-weight: 300;
+            font-size: 24px;
+            color: #979797;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            padding: 0 15px;
+            background: $white;
+            @media (max-width: $md2+px){
+                font-size: 22px;
+            }
+            @media (max-width: $md3+px){
+                font-size: 20px;
+            }
+            @media (max-width: $md4+px){
+                font-size: 18px;
+            }
+        }
+        input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0px 15px;
+            font-size: 18px;
+            color: #555;
+            &::placeholder{
+                font-weight: 300;
+                font-size: 18px;
+                color: #979797;
+            }
+        }
+        &.error{
+            border: 1px solid #FF0000;
+            input, textarea{
+                color: #FF0000;
+                &::placeholder{
+                    color: #FF0000;
+                }
+            }
+            
+        }
+    }
+    &__to {
+        display: grid;
+        grid-template-columns: 11fr 9fr;
+        gap: 40px;
+        @media (max-width: $md1+px){
+           gap: 20px;
+        }
+        @media (max-width: $md2+px){
+            grid-template-columns: 1fr;
+            gap: 0px;
+        }
+    }
+
+    &__descr {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $md2+px){
+           margin: 0px 0px 40px 0px;
+        }
+    }
+
+    &__label {
+        font-size: 14px;
+        color: #575757;
+        @media (max-width: $md1+px){
+           font-size: 12px;
+        }
+        @media (max-width: $md2+px){
+           font-size: 14px;
+        }
+        @media (max-width: 359px){
+           font-size: 13px;
+        }
+    }
+
+    &__reserve {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        margin: 0px 0px 100px 0px;
+        background: $white;
+        height: 50px;
+        box-shadow: -10px 10px 20px rgba(230, 230, 230, 0.2), 10px -10px 20px rgba(230, 230, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 25px rgba(230, 230, 230, 0.9);
+        border-radius: 5px;
+        font-size: 24px;
+        color: #555555;
+        span{
+            font-weight: 300;
+            margin: 0px 0px 0px 5px;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            margin: 0px 20px 0px 0px;
+            @media (max-width: $md3+px){
+                margin: 0px 10px 0px 0px;
+            }
+        }
+        @media (max-width: $md1+px){
+            font-size: 22px;
+        }
+        @media (max-width: $md2+px){
+            margin: 0px 0px 80px 0px;
+        }
+        @media (max-width: $md3+px){
+            margin: 0px 0px 40px 0px;
+            font-size: 20px;
+        }
+        @media (max-width: $md4+px){
+            font-size: 18px;
+        }
+        @media (max-width: 359px){
+            font-size: 16px;
+         }
+    }
+}
+
+
+
+.form-completion {
+    margin: 120px 0px 0px 0px;
+    @media (max-width: $md1+px){
+       margin: 100px 0px 0px 0px;
+    }
+    @media (max-width: $md2+px){
+        margin: 70px 0px 0px 0px;
+    }
+    &__current {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
+        margin: 0px 0px 50px 0px;
+        @media (max-width: $md2+px){
+            grid-template-columns: 1fr;
+            margin: 0px 0px 40px 0px;
+        }
+    }
+
+    &__from {
+    }
+
+    &__currency {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        color: #555555;
+        margin: 0px 0px 30px 0px;
+        img{
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            margin: 0px 20px 0px 0px;
+            @media (max-width: $md1+px){
+                margin: 0px 10px 0px 0px;
+            }
+        }
+        @media (max-width: $md1+px){
+           font-size: 22px;
+        }
+        @media (max-width: $md2+px){
+            margin: 0px 0px 10px 0px;
+            font-size: 18px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        color: #555555;
+        margin: 0px 0px 20px 0px;
+        @media (max-width: $md3+px){
+            margin: 0px 0px 15px 0px;
+        }
+        @media (max-width: 359px){
+            font-size: 22px;
+         }
+    }
+
+    &__input{
+        background: $white;
+        box-shadow: -10px 10px 20px rgba(230, 230, 230, 0.2), 10px -10px 20px rgba(230, 230, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 25px rgba(230, 230, 230, 0.9);
+        border-radius: 5px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0px 0px 20px 0px;
+        overflow: hidden;
+        transition: all .3s ease-in-out;
+        span{
+            font-weight: 300;
+            font-size: 24px;
+            color: #979797;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            padding: 0 15px;
+            background: $white;
+            @media (max-width: $md2+px){
+                font-size: 22px;
+            }
+            @media (max-width: $md3+px){
+                font-size: 20px;
+            }
+            @media (max-width: $md4+px){
+                font-size: 18px;
+            }
+            @media (max-width: 359px){
+               font-size: 16px;
+            }
+        }
+        input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0px 15px;
+            font-size: 18px;
+            color: #555;
+            &::placeholder{
+                font-weight: 300;
+                font-size: 18px;
+                color: #979797;
+            }
+        }
+        &.error{
+            border: 1px solid #FF0000;
+            input, textarea{
+                color: #FF0000;
+                &::placeholder{
+                    color: #FF0000;
+                }
+            }
+            
+        }
+    }
+
+    &__to {
+    }
+
+    &__requisites {
+        margin: 0px 0px 50px 0px;
+    }
+
+    &__props {
+        margin: 0px 0px 20px 0px;
+        white-space: nowrap;
+        width: 100%;
+        &:last-child{
+          margin: 0px 0px 0px 0px;
+        }
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        background: $white;
+        height: 50px;
+        box-shadow: -10px 10px 20px rgba(230, 230, 230, 0.2), 10px -10px 20px rgba(230, 230, 230, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.9), 10px 10px 25px rgba(230, 230, 230, 0.9);
+        border-radius: 5px;
+        font-size: 24px;
+        color: #555555;
+        img{
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            margin: 0px 20px 0px 0px;
+            @media (max-width: $md1+px){
+                margin: 0px 10px 0px 0px;
+            }
+        }
+        span{
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        @media (max-width: $md1+px){
+            font-size: 22px;
+         }
+        @media (max-width: $md2+px){
+           font-size: 20px;
+        }
+        @media (max-width: $md3+px){
+           margin: 0px 0px 40px 0px;
+           font-size: 18px;
+        }
+        @media (max-width: 359px){
+            font-size: 16px;
+         }
+    }
+}

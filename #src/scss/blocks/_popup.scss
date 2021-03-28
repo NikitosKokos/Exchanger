@@ -174,9 +174,18 @@
             font-size: 14px;
             color: #555;
             resize: none;
-            &:placeholder{
+            &::placeholder{
                 font-size: 14px;
                 color: #555;
+            }
+            &::-webkit-scrollbar{
+                width: 10px;
+            }
+            &::-webkit-scrollbar-thumb{
+                background: #9b51e0;
+            }
+            &::-webkit-scrollbar-track{
+                background: transparent;
             }
         }
         @media (max-width: $md4+px){
