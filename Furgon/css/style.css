@@ -683,6 +683,7 @@ input::-webkit-inner-spin-button {
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
+  margin: -3px 0px 0px 0px;
 }
 
 .footer__btn span {
