@@ -562,6 +562,157 @@ input::-webkit-inner-spin-button {
   background-size: contain !important;
 }
 
+.footer {
+  background: #1E2833;
+  padding: 15px 0;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 0px 50px 0px;
+}
+
+.footer__logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.footer__descr {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 111%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  padding: 20px 0px 0px 0px;
+}
+
+.footer__descr:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+      -ms-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  height: 1px;
+  width: 30px;
+  background: #fff;
+}
+
+.footer__nav {
+  margin: 0px 0px 50px 0px;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__list li {
+  margin: 0px 60px 0px 0px;
+}
+
+.footer__list li:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.footer__link {
+  font-size: 15px;
+  color: #fff;
+  position: relative;
+}
+
+.footer__link:after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #575757;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+}
+
+.footer__telegram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 0px 30px 0px;
+}
+
+.footer__btn picture {
+  font-size: 0;
+}
+
+.footer__btn img {
+  width: 22px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.footer__btn span {
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  margin: 0px 0px 0px 10px;
+  position: relative;
+}
+
+.footer__btn span:after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #575757;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+}
+
+.footer__copy {
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+
 .registration {
   position: relative;
 }
@@ -620,13 +771,13 @@ input::-webkit-inner-spin-button {
 }
 
 .steps-registration {
+  margin: 0 -20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 -20px;
 }
 
 .steps-registration__step {
@@ -647,6 +798,17 @@ input::-webkit-inner-spin-button {
   color: #575757;
   font-size: 18px;
   border-radius: 50%;
+}
+
+.steps-registration__step picture {
+  font-size: 0;
+}
+
+.steps-registration__step img {
+  width: 20px;
+  height: 16px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .steps-registration__text {
@@ -1215,11 +1377,11 @@ input::-webkit-inner-spin-button {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin: 0px 0px 20px 0px;
   overflow: hidden;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  margin: 0px 0px 20px 0px;
 }
 
 .form-choice__input span {
@@ -2879,6 +3041,16 @@ body.hidden {
     opacity: 1;
   }
 
+  .footer__link:hover:after {
+    width: 100%;
+    opacity: 1;
+  }
+
+  .footer__btn:hover span:after {
+    width: 100%;
+    opacity: 1;
+  }
+
   .form-registration__eye:hover svg path {
     fill-opacity: .9;
   }
@@ -3216,12 +3388,25 @@ body.hidden {
     height: 18px;
   }
 
+  .footer__list li {
+    margin: 0px 40px 0px 0px;
+  }
+
+  .footer__telegram {
+    margin: 0px 0px 20px 0px;
+  }
+
   .steps-registration__step {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 20px;
             flex: 0 0 20px;
     height: 20px;
     font-size: 14px;
+  }
+
+  .steps-registration__step img {
+    width: 12px;
+    height: 8px;
   }
 
   .steps-registration__text {
@@ -3493,6 +3678,29 @@ body.hidden {
     left: 0;
   }
 
+  .footer {
+    padding: 35px 0;
+  }
+
+  .footer__text {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .footer__nav {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .footer__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__list li {
+    margin: 0px 0px 10px 0px;
+  }
+
   .registration__main_c {
     max-width: none;
   }
@@ -3513,7 +3721,6 @@ body.hidden {
   }
 
   .steps-registration {
-    margin: 0px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3522,6 +3729,7 @@ body.hidden {
         -ms-flex-align: start;
             align-items: flex-start;
     max-width: 190px;
+    margin: 0px;
   }
 
   .steps-registration__step {
@@ -3530,6 +3738,13 @@ body.hidden {
             flex: 0 0 40px;
     height: 40px;
     font-size: 20px;
+    padding: 3px 0px 0px 0px;
+  }
+
+  .steps-registration__step img {
+    width: 20px;
+    height: 16px;
+    margin: -3px 0px 0px 0px;
   }
 
   .steps-registration__text {
@@ -3599,6 +3814,7 @@ body.hidden {
     width: 100%;
     height: 100%;
     background: url("../img/registration/bg.png") 0 0 no-repeat;
+    background-size: cover !important;
   }
 
   .exchange-registration__title {
@@ -4054,6 +4270,10 @@ body.hidden {
 
   .__select__label {
     font-size: 16px;
+  }
+
+  .footer__copy {
+    font-size: 13px;
   }
 
   .exchange-registration__time {
