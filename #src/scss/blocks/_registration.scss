@@ -532,28 +532,35 @@
     @media (max-width: $md1+px){
         padding: 0px 0px 30px 60px;
     }
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #9B51E0 18.06%, rgba(45, 156, 219, 0.3) 100%, rgba(45, 156, 219, 0.5) 100%);
+        z-index: 2;
+        display: none;
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        // background: url(attr(data-img)) 0 0 no-repeat;
+        background-size: cover !important;
+        display: none;
+    }
     @media (max-width: $md3+px){
         padding: 0px 30px 30px 30px;
         margin: 0 -30px;
         &:after{
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, #9B51E0 18.06%, rgba(45, 156, 219, 0.3) 100%, rgba(45, 156, 219, 0.5) 100%);
-            z-index: 2;
+            display: block;
         }
-        &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: url('../img/registration/bg.png') 0 0 no-repeat;
-            background-size: cover !important;
+        &__bg {
+            display: block;
         }
     }
     &__title {

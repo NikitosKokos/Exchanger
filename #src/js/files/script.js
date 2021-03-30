@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
             togglePass.classList.toggle('active');
         });    
     }
+    const exchangeRegistration = document.querySelector('.exchange-registration__bg');
+    const exchangeBg = document.querySelector('.registration__bg img');
+
+    if(exchangeRegistration){
+        exchangeRegistration.style.background = `url('${exchangeBg.getAttribute('src')}') 0 0 no-repeat`;
+    }
+
     // popup
     const popup = document.querySelector('.popup-reviews');
     const popupOpen = document.querySelector('.grid__btn_review');

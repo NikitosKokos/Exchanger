@@ -1,6 +1,3 @@
-function email_test(input) {
-	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-}
 
 document.addEventListener('DOMContentLoaded', () => {
     // change password input state
@@ -16,6 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
             togglePass.classList.toggle('active');
         });    
     }
+    const exchangeRegistration = document.querySelector('.exchange-registration__bg');
+    const exchangeBg = document.querySelector('.registration__bg img');
+
+    if(exchangeRegistration){
+        exchangeRegistration.style.background = `url('${exchangeBg.getAttribute('src')}') 0 0 no-repeat`;
+    }
+
     // popup
     const popup = document.querySelector('.popup-reviews');
     const popupOpen = document.querySelector('.grid__btn_review');
@@ -200,8 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       
 
-}); // end
-// @ @include('files/forms.js', {})
+}); // end;
 // поддержка webp
 function testWebP(callback) {
   let webP = new Image();
