@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
               selected: true,
               disabled: false,
               customProperties: {
-                img: './img/currencies/03.png',
+                img: './img/currencies/06.png',
               },
             },
             {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
               selected: false,
               disabled: false,
               customProperties: {
-                img: './img/currencies/03.png',
+                img: './img/currencies/06.png',
               },
             },
             {
