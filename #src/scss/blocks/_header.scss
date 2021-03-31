@@ -231,7 +231,7 @@
         @media (max-width: $md2+px){
             padding: 10px 28px 10px 10px;
         }
-        background: #FFB800;
+        background: $yellow;
         &:before{
             width: 12px;
             height: 19.25px;

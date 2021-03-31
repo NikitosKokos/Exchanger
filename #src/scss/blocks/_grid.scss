@@ -79,7 +79,7 @@
         align-items: center;
         transition: all .3s ease-in-out;
         &_prev {
-            background: #FFB800;
+            background: $yellow;
             @media (min-width: 992px){
                &:hover{
                 background: #9B51E0;
@@ -109,7 +109,7 @@
             background: #9B51E0;
             @media (min-width: 992px){
                 &:hover{
-                 background: #FFB800;
+                 background: $yellow;
               }
              }
         }

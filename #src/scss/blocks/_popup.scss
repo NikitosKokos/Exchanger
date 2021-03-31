@@ -4,7 +4,7 @@
     height: 80px;
     right: 30px;
     bottom: 30px;
-    background: #FFB800;
+    background: $yellow;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -206,7 +206,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #FFB800;
+        background: $yellow;
         border-radius: 5px;
         padding: 0 15px;
         height: 40px;
